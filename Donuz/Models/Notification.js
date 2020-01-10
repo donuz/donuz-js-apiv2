@@ -12,5 +12,11 @@ export var notification = {
             'Token': config.token,
             'estabelecimento':config.estabelecimento_id
         },data);
+    },
+    sendNotificationDinamically: function (data) {
+        return post('notification/dinamically/send', {
+            'Token': config.token,
+            'estabelecimento':config.estabelecimento_id
+        },data);
     }
 }

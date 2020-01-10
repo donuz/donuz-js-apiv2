@@ -12,5 +12,11 @@ export var triggers = {
             'Token': config.token,
             'estabelecimento':config.estabelecimento_id
         },data);
+    },
+    sendWhatsappDinamically: function (data) {
+        return post('whatsapp/dinamically/send', {
+            'Token': config.token,
+            'estabelecimento':config.estabelecimento_id
+        },data);
     }
 }

@@ -7,17 +7,14 @@ var config = require(path.resolve('donuz-config/config.json'))
 
 export var points = {
     getPointsExtract: function (tokenCliente) {
-        return get('ponto/' + config.estabelecimento_id, {
+        return get('points', {
             'Token': config.token,
-            'Token-Cliente': tokenCliente
+            'Token-Cliente': tokenCliente,
+            'estabelecimento':config.estabelecimento_id
         });
     },
     insertPoints: function (data) {
-        data.acao = 'inserir';
-        data.estabelecimento = config.estabelecimento_id;
-
-        return post('ponto', {
-            'Token': config.token
-        }, data);
+    
+        return post('points', null, data);
     }
 }
