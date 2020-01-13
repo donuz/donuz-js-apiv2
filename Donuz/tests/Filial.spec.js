@@ -28,10 +28,6 @@ describe('Branch requests', () => {
         let custom= Donuz.branch.getBranchByID(1);
         expect(custom).to.be.an.instanceOf(Object);
     });
-    it('should return branch object by tag', () => {
-        let branch=Donuz.branch.getBranchByTag('tag');
-        expect(branch).to.be.an.instanceOf(Object);
-    });
     it('should return branches', () => {
         let branch= Donuz.branch.getBranchs();
         expect(branch).to.be.an.instanceOf(Object);

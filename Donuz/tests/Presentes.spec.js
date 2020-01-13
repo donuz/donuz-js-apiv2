@@ -24,16 +24,8 @@ describe('Clients requests', () => {
     afterEach(() => {
         fetchedStub.restore();
     });
-    it('should return count of gifts', () => {
-        let custom= Donuz.gifts.countGifts('dsadsadasdasd');
-        expect(typeof(custom)).to.be.eql(typeof(0));
-    });
     it('should return gift object', () => {
         let gift=Donuz.gifts.getGift(1);
-        expect(gift).to.be.an.instanceOf(Object);
-    });
-    it('should return gift info object', () => {
-        let gift= Donuz.gifts.getGiftInfo(1,'daswdasdasdas');
         expect(gift).to.be.an.instanceOf(Object);
     });
     it('should return all gifts', () => {

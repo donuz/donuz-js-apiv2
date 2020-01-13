@@ -1,4 +1,5 @@
 import {
+    get,
     post
 } from '../Requisitions';
 var path= require('path');
@@ -9,7 +10,7 @@ export var computableCode = {
         return get('computableCode/settings', {
             'Token': config.token,
             'estabelecimento': config.estabelecimento_id
-        }, data);
+        });
     },
     insertCode: function (tokenCliente, data) {
         return post('computableCode', {

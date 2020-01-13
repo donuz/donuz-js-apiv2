@@ -24,10 +24,6 @@ describe('Clients requests', () => {
     afterEach(() => {
         fetchedStub.restore();
     });
-    it('should return custom fields object', () => {
-        let custom= Donuz.customer.getCustomFields();
-        expect(custom).to.be.an.instanceOf(Object);
-    });
     it('should return sign in object', () => {
         let signIn=Donuz.customer.signIn('teste','teste');
         expect(signIn).to.be.an.instanceOf(Object);

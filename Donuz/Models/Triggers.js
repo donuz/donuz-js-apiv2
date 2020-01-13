@@ -4,7 +4,7 @@ import {
     deleteRequest
 } from '../Requisitions';
 var path= require('path');
-var config = require(path.resolve('donuz-config/config.json'))
+var config = require(path.resolve('/donuz-config/config.json'))
 
 export var triggers = {
     getScheduledTriggers: function (fields=null,page=null,per_page=null) {

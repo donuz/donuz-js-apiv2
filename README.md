@@ -22,7 +22,7 @@ $ npm install donuz-js
 
 ### Configurando variáveis da API
 
-Crie um arquivo config.json dentro da pasta donuz-config e adicione o seu Token e o ID do seu estabelecimento:
+Crie um arquivo config.json dentro da pasta /donuz-config e adicione o seu Token e o ID do seu estabelecimento:
 
 ```js
 {"token":"token de acesso a api",
