@@ -6,6 +6,6 @@ var config = require(path.resolve('donuz-config/config.json'))
 
 export var mails = {
     sendMail: function (data) {
-        return post('contato', null , data);
+        return post('contact', null , data);
     }
 }

@@ -7,9 +7,13 @@ var path= require('path');
 var config = require(path.resolve('donuz-config/config.json'))
 
 export var devices = {
-    getDevicesByEstabelishment: function () {
+    getDevicesByEstabelishment: function (fields=null,page=null,per_page=null) {
        
-        return get('devices', {
+       fields=(fields!=null)?'fields='+fields:'';
+       page=(page!=null)?'page='+page:'';
+       per_page=(per_page!=null)?'per_page='+per_page:'';
+
+        return get('devices?'+fields+','+page+','+per_page, {
             'estabelecimento': config.estabelecimento_id,
             'Token': config.token
         });
