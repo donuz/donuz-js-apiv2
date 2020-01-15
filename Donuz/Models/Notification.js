@@ -4,7 +4,7 @@ import {
     deleteRequest
 } from '../Requisitions';
 var path= require('path');
-var config = require(path.resolve('donuz-config/config.json'))
+var config = (sessionStorage.getItem('estabelecimento')!=null)?sessionStorage.getItem('estabelecimento'):require(require('../../donuz-config/config.json'))
 
 export var notification = {
    sendNotification: function (data) {

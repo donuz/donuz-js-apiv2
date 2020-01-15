@@ -1,9 +1,7 @@
 const base_url = 'https://app.donuz.co/api/';
 var path= require('path');
-var config = require(path.resolve('donuz-config/config.json'))
+var config = (sessionStorage.getItem('estabelecimento')!=null)?sessionStorage.getItem('estabelecimento'):require(require('../donuz-config/config.json'))
 const token = config.token;
-
-console.log(path.resolve('donuz-config/config.json'));
 export async function get(url, header = null) {
     if (header == null){
         header = {

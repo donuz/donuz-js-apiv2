@@ -12,6 +12,10 @@ import { balance } from './Donuz/Models/Saldo';
 import { voucher } from './Donuz/Models/Voucher';
 import { gifts } from './Donuz/Models/Presentes';
 import { devices } from './Donuz/Models/Dispositivos';
+import { notification } from './Donuz/Models/Notification';
+import { whatsapp } from './Donuz/Models/Whatsapp';
+import {triggers } from './Donuz/Models/Triggers';
+
 export var Donuz = {
     category: categories,
     customer: clients,
@@ -25,6 +29,9 @@ export var Donuz = {
     redeemption: rescues,
     balance: balance,
     voucher:voucher,
+    notification:notification,
+    whatsapp:whatsapp,
+    triggers:triggers,
     gifts: gifts,
     estabelishment: estabelishment, 
     prizes: prizes,
